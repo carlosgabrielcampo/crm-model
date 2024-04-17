@@ -1,8 +1,7 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 export default function Router() {
   return (
-    <BrowserRouter>
       <Routes>
         <Route path="/" element={<></>}/>
         <Route path="/home" element={<></>}/>
@@ -13,6 +12,5 @@ export default function Router() {
         <Route path="/funil" element={<></>}/>
         <Route path="/configuracoes" element={<></>}/>
       </Routes>
-    </BrowserRouter>
   );
 }

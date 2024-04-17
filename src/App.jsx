@@ -1,17 +1,17 @@
 import { BrowserRouter } from "react-router-dom";
-import AuthProvider from "./config/context/auth/index.js";
-import CRMProvider from "./config/context/provider/index.jsx";
 import Router from "./routes";
+import AuthProvider from "./config/context/auth/index.jsx";
+import CRMProvider from "./config/context/provider/index.jsx";
 
 function App() {
   return (
-      <AuthProvider>
-        <BrowserRouter>
-          <CRMProvider>
-            <Router />
-          </CRMProvider>
-        </BrowserRouter>
-      </AuthProvider>
+    <AuthProvider>
+      <BrowserRouter>
+        <CRMProvider>
+          <Router />
+        </CRMProvider>
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 

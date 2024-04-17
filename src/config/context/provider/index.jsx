@@ -1,10 +1,10 @@
-import { createContext, useState } from "react";
+import { createContext } from "react";
 const Context = createContext();
 
-export default function AuthProvider({ children }) {
-	const [alertState, setAlertstate] = useState({show: false});
+export default function CRMProvider({ children }) {
+	const user = JSON.parse(localStorage.getItem('user'));
 	return (
-		<Context.Provider value={{alertState, setAlertstate}}>
+		<Context.Provider value={{ user }}>
 			{ children }
 		</Context.Provider>
 	);
