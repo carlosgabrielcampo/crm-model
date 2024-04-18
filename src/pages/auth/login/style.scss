@@ -1,0 +1,119 @@
+$assetPath: "../../../../src/images/login-wallpaper.jpg";
+.box {
+    background: url(#{$assetPath});
+    background-repeat: no-repeat;
+    background-size: 140vw 140vh;    
+    img {
+      transform: scaleX(-1);
+    }
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+    .box-left {
+      display: flex;
+      width: 90%;
+      height: 100%;
+      justify-content: flex-start;
+      align-items: center;
+      .content {
+        width: 654px;
+        height: 296px;
+        .title {
+          min-width: calc(100% - 80px);
+          margin-left: 80px;
+          h1 {
+            width: 100%;
+            color: #ffffff;
+            font-size: 32px;
+            font-weight: 200;
+            font-family: 'Montserrat', auto;
+          }
+          width: 340px;
+          margin-bottom: 20px;
+        }
+        .subtitle {
+          min-width: calc(80% - 80px);
+          margin-left: 80px;
+          width: 340px;
+          h2 {
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 100;
+            margin-bottom: 20px;
+            font-family: 'Nunito Sans', auto;
+          }
+          margin-bottom: 30px;
+        }
+        .learnMore {
+          margin-left: 80px;
+          cursor: pointer;
+          background: transparent;
+          font-weight: 100;
+          font-size: 14px;
+          width: 170px;
+          padding: 10px;
+          color: #FFFFFF;
+          border: solid 1px white;
+        }
+        .learnMore:hover {
+          background: rgba(255, 255, 255, 0.3);
+        }
+      }
+    }
+    .box-right {
+      background: rgba(255, 255, 255, 0.918);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 500px;
+      .title {
+        h1 {
+          color: #2499e3;
+          font-size: 24px;
+          font-weight: 400;
+          font-family: 'Montserrat', auto;
+        }
+        width: 340px;
+        margin-bottom: 20px;
+      }
+      .subtitle {
+        width: 340px;
+        h2 {
+          font-size: 15px;
+          font-weight: 400;
+          font-family: 'Nunito Sans', auto;
+        }
+        margin-bottom: 30px;
+      }
+  
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: 340px;
+        height: 164px;
+        input {
+          cursor: pointer;
+          border: none;
+          display: flex;
+          width: 100%;
+        }
+  
+        input[type="button"] {
+          border: none;
+          background: #2499e3;
+          color: #fff;
+          width: 130px;
+          font-size: 15px;
+          font-family: 'Nunito Sans', auto;
+        }
+        input[type="button"]:hover {
+          background: #249ae3b0;
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,12 @@
+.button-input {
+  position: relative;
+  input {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    padding: 14px;
+    border: none;
+  }
+}

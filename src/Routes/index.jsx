@@ -1,10 +1,10 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import Login from "../pages/auth/login";
 
 export default function Router() {
   return (
-    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<></>}/>
+        <Route path="/" element={<Login/>}/>
         <Route path="/home" element={<></>}/>
         <Route path="/financeiro" element={<></>}/>
         <Route path="/cadastro" element={<></>}/>
@@ -13,6 +13,5 @@ export default function Router() {
         <Route path="/funil" element={<></>}/>
         <Route path="/configuracoes" element={<></>}/>
       </Routes>
-    </BrowserRouter>
   );
 }
