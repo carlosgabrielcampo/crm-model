@@ -1,0 +1,43 @@
+.content-input {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 14px;
+  padding-top: 10px;
+  width: 100%;
+  input {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 14px 12px;
+    width: 100%;
+  }
+  input:focus + label{
+    transition: 1s;
+    top: 2px;
+  }
+
+  input:not(:placeholder-shown) + label{
+    transition: 1s;
+    top: 2px;
+  }
+
+  label {
+    transition: 1s;
+    pointer-events: none;
+    left: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    top: 34%;
+    color: rgba(124, 124, 124, 0.7);
+    background-color: #fff;
+    background: linear-gradient(180deg, #ffffff00 0%, #fff 35%);
+    position: absolute;
+  }
+  .error-message {
+    left: 10px;
+    bottom: 0;
+  }
+}
+
