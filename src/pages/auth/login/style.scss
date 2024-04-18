@@ -1,5 +1,8 @@
+$assetPath: "../../../../src/images/login-wallpaper.jpg";
 .box {
+    background: url(#{$assetPath});
     background-repeat: no-repeat;
+    background-size: 140vw 140vh;    
     img {
       transform: scaleX(-1);
     }

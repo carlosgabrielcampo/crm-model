@@ -16,20 +16,9 @@ export default function Login() {
 	const navigate = useNavigate();
 
 	function auth({ email, password }) {
-		api.post('/login', { email, password })
-			.then(response => {
-				const { data } = response;
-				if (data.error) {
-					setError(data);
-				} else {
-					sessionStorage.setItem('jwt', data.token);
-					localStorage.setItem('user', JSON.stringify(data.user));
-					navigate('/home');
-				}
-			})
-			.catch(error => {
-				console.error(error);
-			});
+        sessionStorage.setItem('jwt', "asasas");
+        localStorage.setItem('user', JSON.stringify({}));
+        navigate('/home');
 	}
 
 	return (
@@ -78,7 +67,8 @@ export default function Login() {
 					<InputText
 						type="password"
 						placeholder="Senha"
-						register={register('password', { 
+						register={
+                            register('password', { 
 							required: {
 								value: true, 
 								message: 'Este campo é obrigatorio!' 
