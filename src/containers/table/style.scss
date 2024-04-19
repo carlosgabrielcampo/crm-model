@@ -1,0 +1,133 @@
+.pageContent{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  .tableBtns {
+    margin: 10px 0px 20px ;
+    display: flex;
+    .register{
+      background: #248ed0;
+      color: #FFF;
+      font-size: 16px;
+      width: 165px;
+      height: 50px;
+      border: 1px;
+      border-radius: 2px;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+    .search {
+      font-size: 16px;
+      width: 140px;
+      height: 50px;
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+  }
+  .tableHolder {
+    width: calc(100% - 20px);
+    height: 100%;
+    table {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      margin: 0 auto;
+      display: block;
+      border-spacing: 0;
+      thead {
+        display: flex;
+        width: 100%;
+        height: 80px;
+        text-align: left;
+        background: rgba(36, 142, 208, 1);
+        .head-input{
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          min-width: 145px;
+          p {
+            align-self: flex-start;
+            margin-top: 10px;
+            height: 10px;
+            margin-left: 20px;
+            font-weight: 600;
+            flex-grow: 1;
+            color: #FFF;
+            text-align: center;
+          }
+          .content-input {
+            padding: 0;
+            width: calc(100% - 60px);
+            input {
+              padding: 10px;
+              height: 10px;
+              margin-bottom: 10px;
+            }
+          }
+          .select-container {
+            width: calc(100% - 60px);
+            padding: 0px 10px 0px 10px;
+            margin-bottom: 10px;
+              .content-input {
+                width: 100%;
+                height: 100%;
+              input {
+                padding: 7px 10px 7px 10px;
+                width: 100%;
+                height: 100%;
+                margin-bottom: 0px;
+              }
+            }
+          }
+        }
+      }
+      tbody {
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-height: 68%;
+        overflow-y: scroll;
+        td {
+          font-size: 14px;
+          min-width: 100px;
+          width: 100%;
+          height: 18px;
+          padding: 20px;
+          overflow: hidden;
+        }
+      }
+      
+      tr {
+        display: flex;
+        width: 100%;
+      }
+      tr:nth-child(even) {
+        background: linear-gradient(340deg, rgba(48, 185, 245, 0.2) 10.35%, rgba(36, 142, 208, 0.2) 100.76%);
+      }
+    }
+  }
+}
+.btnModal {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+
+  input {
+    background-color: #E5E5E5;
+    border: #7C7C7C solid 1px;
+  }
+
+  .save {
+    background-color: #248ed0;
+    border: #248ed0 solid 1px;
+    color: #FFF;
+  }
+}
