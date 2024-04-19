@@ -1,21 +1,22 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './style.scss';
 import Datatable from '../../../containers/table';
 import registerIcon from '../../../images/icons/registericon.svg';
-import { InputText, Button, Checkbox, InputSelect } from '../../../components';
 import { useForm } from 'react-hook-form';
-import validate from '../../../util/validationModel/index.js';
+import validate from '../../../util/validationModel/index.jsx';
 import plus from '../../../images/icons/plusIcon.svg';
 import minus from '../../../images/icons/minusicon.svg';
-import api from '../../../config/api';
-import CRMContext from '../../../context/crmContext';
+import Button from '../../../components/button/index.jsx';
+import Checkbox from '../../../components/input/checkbox/index.jsx';
+import InputText from '../../../components/input/text/index.jsx';
+import InputSelect from '../../../components/input/select/index.jsx';
+
 export default function UserRegister() {
 	const { register, handleSubmit, getValues, setValue, resetField, formState: {errors} } = useForm();
 	const [tabSelected, setTabSelected] = useState(1);
 	const [modalShown, setModalShown] = useState(false);
 	const [open, setOpen] = useState({});
-	const {setAlertstate} = useContext(CRMContext);
 	const head = [
 		{
 			thead: 'Nome',
@@ -63,9 +64,6 @@ export default function UserRegister() {
 		delete data.surName;
 		data.name = name;
 		data.permissions = validate;
-		api.post('/users',data)
-			.then(() => {setAlertstate({class: 'success', msg: 'Dados salvos com sucesso', show: true});	setModalShown(false);})
-			.catch((e) => setAlertstate({class: 'error', msg: e.response.data, show: true}));
 	}
 	function tabInformation() {
 		return(

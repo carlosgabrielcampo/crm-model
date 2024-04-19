@@ -2,9 +2,11 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
 import React, {useEffect, useState} from 'react';
 import api from '../../config/api';
-import { Button, Modal, InputText, InputSelect } from '../../components';
 import './style.scss';
-
+import Button from '../../components/button';
+import InputText from '../../components/input/text';
+import InputSelect from '../../components/input/select';
+import Modal from '../../components/modal';
 
 export default function Datatable({head, body, modal,database, modalHandle, search}) {
 	const [tableHide, setTableHide] = useState(true);

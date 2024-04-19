@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import Datatable from '../../../containers/table';
 import registerIcon from '../../../images/icons/registericon.svg';
-import { InputText, Button } from '../../../components';
 import api from '../../../config/api';
+import InputText from '../../../components/input/text';
+import Button from '../../../components/button';
 
 export default function ClientRegister() {
 	const { register, handleSubmit, getValues, formState: {errors} } = useForm();
