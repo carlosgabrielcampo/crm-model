@@ -12,15 +12,16 @@ import logoIcon from '../../images/icons/logoicon.svg';
 import userIcon from '../../images/icons/user.svg';
 import lockIcon from '../../images/icons/lockicon.svg';
 import unlockIcon from '../../images/icons/unlockicon.svg';
+
 import { useNavigate } from 'react-router-dom';
 import DashboardOption from './components/options';
 import Header from './components/header';
-import { Alert } from '../../components';
-import CRMContext from '../../context/crmContext';
+import Alert from '../../components/alert/index.jsx';
+// import CRMProvider from '../../config/context/provider';
 
 export default function DashboardContainer({ children }) {
 	const [sidebarOpen, setSidebarOpen ] = useState(false);
-	const {alertState, setAlertstate} = useContext(CRMContext);
+	// const {alertState, setAlertstate} = useContext(CRMProvider);
 	const [user, setUser] = useState();
 	const [iconsState, seticonsState ] = useState({});
 	const navigate = useNavigate();
@@ -33,7 +34,9 @@ export default function DashboardContainer({ children }) {
 	function handleClick(path, event) {
 		const parent = event?.target?.parentElement.id;
 		navigate(path);
-		parent ? seticonsState((prevState => ({...prevState, [parent]: !prevState[parent]}))) : '';
+		if(parent) { 
+            seticonsState((prevState => ({...prevState, [parent]: !prevState[parent]}))) 
+        } else return ""
 	}
 
 	const dashOptions = [
@@ -93,12 +96,12 @@ export default function DashboardContainer({ children }) {
 	return (
 		<div className='page'>
 			{ 
-				alertState?.show && 
-        <Alert 
-        	className={alertState?.class}
-        	message={alertState?.msg}
-        	onClick={() => setAlertstate({show: false})}
-        />
+		// 		alertState?.show && 
+		// <Alert 
+		// 	className={alertState?.class}
+		// 	message={alertState?.msg}
+		// 	onClick={() => setAlertstate({show: false})}
+		// />
 			}
 			<div className={`dashboard ${sidebarOpen ? 'open' : 'closed'}`} >
 				<div className='logo'>

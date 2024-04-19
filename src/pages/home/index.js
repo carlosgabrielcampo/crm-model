@@ -1,6 +1,6 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
 import React, { useEffect, useState } from 'react';
-import { Alert } from '../../components';
+import Alert from '../../components/alert/index.jsx';
 import './style.scss';
 
 export default function Home() {
@@ -17,9 +17,7 @@ export default function Home() {
       	onClick={() => setAlertstate(!alertState)}
       />
 			}
-			<div className='homebox'>
-
-			</div>
+			<div className='homebox'></div>
 		</>
 	);
 }
