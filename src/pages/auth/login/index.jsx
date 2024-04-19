@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom';
-import api from '../../../config/api';
 import './style.scss';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
@@ -8,10 +7,6 @@ import Button from '../../../components/button';
 
 export default function Login() {
 	const { register, handleSubmit, formState: { errors } } = useForm();
-	const [error, setError] = useState({
-		error: true,
-		message: null
-	});
 	const [email, setemail] = useState();
 	const navigate = useNavigate();
 
@@ -80,7 +75,6 @@ export default function Login() {
 						value="Login" 
 						className="button-control" 
 						onClick={handleSubmit(auth)} />
-					{ error.error && <p className="error-message">{error.message}</p> }
 				</form>
 			</div>
 		</div>

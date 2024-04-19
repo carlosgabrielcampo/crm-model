@@ -1,0 +1,94 @@
+.iconHolder {
+  cursor: pointer;
+  transition: 1s;
+  .selector {
+    display: flex;
+    padding: 5px 0px;
+    align-items: center;
+    .arrow-closed {
+      pointer-events: none;
+      margin-right: 20px;
+      transition: 1s;
+      position: relative;
+      margin-left: auto;
+      display: flex;
+      flex-direction: row;
+      height: 15px;
+    }
+    .arrow-open {
+      pointer-events: none;
+      margin-right: 20px;
+      transition: 1s;
+      position: relative;
+      margin-left: auto;
+      display: flex;
+      flex-direction: row;
+      height: 15px;
+      transform: rotate(90deg);
+    }
+    p {
+      font-weight: 900;
+      pointer-events: none;
+      color: #fff;
+      display: flex;
+      font-size: 14px;
+    }
+    .icon {
+      pointer-events: none;
+      margin: 0px 20px;
+      width: 28px;
+      height: 28px;
+    }
+  }
+  .dashboard-option-open {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    overflow-x: hidden;
+    .dash-option {
+      transition: 1s;
+      margin: 3px 0px 0px 0px;
+      border-radius: 3px;
+      width: 60%;
+      border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+      display: flex;
+      height: 38px;
+      align-items: center;
+      justify-content: center;
+      p {
+        min-height: 20px;
+        text-align: center;
+        transition: 1s;
+        color: #fff;
+        font-size: 14px;
+      }
+    }
+    .dash-option:hover{
+      width: 100%;
+      transition: 1s;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+  .dashboard-option-closed {
+    height: auto;
+    height: 0%;
+    top: 0;
+    display: none;
+    .dash-option {
+      height: 0%;
+      width: 100%;
+      border-bottom: solid 0px rgba(255, 255, 255, 0.5);
+      p {
+        color: transparent;
+        width: 100%;
+        height: 0px;
+      }
+    }
+  }
+  .selector:hover {
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
